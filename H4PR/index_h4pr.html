@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<header>
+        <style>
+                input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+                </style>
+
+</header>
+
+
+<body>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2019 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    // If the count down is over, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+<p id="demo"></p>
+
+<form>
+Dueno<input type="text" name="duno" id='dno'><br>
+<p>Direccion fisica:</p> <input type="text" name="vide" id='bario'>
+<p>Telefono: </p> <input type="text" name="phone" id='tel'>
+<p>Cuenta Numero:</P> <input type="text" name="cnumber" id='cn'>
+<p>tipo de certificado</P><input type="checkbox" name="fin" id='final'>Final<br>
+<input type="checkbox" name="provi" id='provisio'>provisional<br>
+<p>Reinspeccion por:</p>
+<p>Reparacion</p>
+<input type="checkbox" name="bcontador" id='bsCont'>Base de Contador<br>
+<input type="checkbox" name="TmAerea" id='tAerea'>Toma Aerea<br>
+<input type="checkbox" name="TmSote" id='tSote'>Toma Soterrada<br>
+<input type="checkbox" name="relocabCont" id='rBaseCont'>Relocalizar base Contador<br>
+<p>Instalaciones</P>
+<input type="checkbox" name="genera elect" id='gelect'>Generador Electrico(gasolina, diesel, propano) <br>
+<input type="checkbox" name="Atts" id='ats'>ATS(Automatic transfer switch)<br>
+<input type="checkbox" name="Mats" id='Mts'>Manual TS<br>
+<p>Sistema FOtovoltaico</p><input type="checkbox" name="Invsr" id='Invsor'>Inversor<br>
+<input type="checkbox" name="pvmod" id='pv'>PV Modules<br>
+<input type="checkbox" name="Dsusso" id='dsuso'>Desuso<br>
+<p>Tipo de proyecto:</P>
+<input type="checkbox" name="Dsusso" id='industr'>Industrial<br>
+<input type="checkbox" name="Dsusso" id='come'>Comercial<br>
+<input type="checkbox" name="Dsusso" id='recide'>Recidencial<br>
+<input type="checkbox" name="Dsusso" id='sinfin'>Entidad sin Fines de Lucro o Gubernamental<br>
+<p>Medidor existente numero:</p><input type="text" name="nmed" id='nmedi'><br>
+<p>Identificacion en la base del medidor:</p><input type="text" name="idbmed" id='idbadmedi'><br>
+<p>Medidor vecino numero:</p><input type="text" name="nmedv" id='nmediv'><br>
+</form>
+
+<h2>Certificacion</h2>
+<form>
+
+  <p>Yo,  <input type="text" name="firstnamecomplite" placeholder="nombre propietario" id='fname'>          certifico que soy mayor de 18
+
+           <input type="checkbox" name="casado" id='scasa'>Casado
+        <input type="checkbox" name="soltero" id='solt'>Soltero<br> y vecino de
+   <input type="text" name="vecino" placeholder="vecino de..." id='veci'> Perito Electricista por:
+   <input type="text" name="number_licencia"placeholder="contratad@ por..." id ='contratado'><br>En el lugar:
+   <input type="text" name="where"placeholder="donde..." id='wdonde'><br></p>
+</form>
+
+<form>
+        <h2>I. Sellos por trabajos de construcion electrica realizados</h2>
+
+
+</form>
+
+<form>
+
+
+        <h2>II. Descripcion de instalacion electrica</h2>
+
+       <p>A. voltaje: </p><input type="text" name="vehicle1" id='volt' > <input type="checkbox" name="vehicle1" id='secu' > Secundario<br><input type="checkbox" name="vehicle1" id='prim'> Primario<br>
+        <p>B. Sistema </p><input type="checkbox" name="vehicle1" id='one'> 1<br>
+        <input type="checkbox" name="vehicle1" id='tres'> 3<br>
+        <input type="checkbox" name="vehicle1" id='delta'> delta<br>
+        <input type="checkbox" name="vehicle1" id='estre'> Estrella<br>
+<p>C. Base de medidor: </p><input type="text" name="vehicle1" placeholder="amp"id='amp'> Amp/Cantidad de medidores: <input type="text" name="vehicle1"id='cmedidor' > <br>
+
+<p>D. Espacios vacante de medidores multiples:</p><input type="text" name="vehicle1"id='espvacio' >
+<p>E. Medicion: </p><input type="checkbox" name="vehicle1" id='mdi' > Secundaria<br><input type="checkbox" name="vehicle1" id='secund' > Primaria<br>
+<input type="checkbox" name="vehicle1" id='prim'> CT<br>
+<input type="checkbox" name="vehicle1"id='ct' > VT<br>
+<p>F. Carga:</p><input type="text" name="vehicle1" id='car'><br>
+<p>kw</p>
+<input type="text" name="vehicle1"id='kw'> <br>
+<p>KVA</p>
+<input type="text" name="vehicle1"id='kva'><br>
+<p>G. Calibre:</p>
+<input type="text" name="vehicle1" id='calib'><br>
+<p>H. Toma o acometida:</p>
+<input type="checkbox" name="vehicle1" id='sot'> Soterrada<br>
+<input type="checkbox" name="vehicle1" id='area' > Area<br>
+<p>I. Prueba de energia renovable:</p><input type="checkbox" name="vehicle1" id='s' > si<br>
+<input type="checkbox" name="vehicle1" id='n'> no<br>
+<input type="checkbox" name="vehicle1" id='nse'> No necesario<br>
+<p>J. Sistema renobable: </p><input type="checkbox" name="vehicle1" id='reno'> <br>
+<p>k. Base medidor: </p><input type="checkbox" name="vehicle1" id='ainox'> Acero inoxidable<br>
+<input type="checkbox" name="vehicle1" id='alu' > Aluminio<br>
+<input type="checkbox" name="vehicle1" id='agal'> Acero galvanizado<br>
+</form>
+    <form>
+<h2>III.descripcion de Instalacion Electrica Interrior</h2>
+        <p>A. Numero de tomacorientes:</p> <br>
+        <p>120v</p>    <input type="text" name="vehicle1"id='cientoveitev' > <br>
+        <p>GFCI</p><input type="text" name="firstname" id='gfci'><br>
+        <p>Estufa</p><input type="text" name="firstname"id='estufa'><br>
+            <p>Calentador</p><input type="text" name="firstname" id='calent'><br>
+            <p>240v</p><input type="text" name="firstname"id='dovcuarent'><br>
+            <p>Secadora</p><input type="text" name="firstname"id='secad'><br>
+            <p>Acondicionador de aire<br>
+            B.Num. de circuitos:
+            </p><input type="text" name="firstname"id='ncirc'><br>
+            <p>C. Num. de interruptores: sencillo: </p><input type="text" name="firstname" id='nintersello'><br>
+            <p>Doble</p><input type="text" name="firstname"id='dob'><br>
+            <p>triple</p><input type="text" name="firstname"id='trip'><br>
+            <p>GFCI</p><input type="text" name="firstname"id='gfcin'><br>
+            <p>D. Num. de Luminarias instaladas:</p><input type="text" name="firstname"id='nli'><br>
+            <p>E. Num. de motores y capacidad: </p><input type="text" name="firstname"id='nmoto'><br><p>1</p><input type="text" name="firstname"id='onen'><br><p>hp</p><input type="text" name="firstname"id='hpn'><br><p>3</p><input type="text" name="firstname"id='tresn'><br><p>hp</p><input type="text" name="firstname"id='hpn'><br>
+            <p>F. Otros </p><input type="text" name="firstname" id='otro'><br>
+        </form>
+
+        <form>
+
+            <h2>IV. Existe Infraestructura electronica adecuada para servir este proyecto? descripcion</h2>
+                <input type="checkbox" name="vehicle1" id='sn' > si<br>
+                <input type="checkbox" name="vehicle1" id='nn'> no<br>
+                <p>Condiciones existentes:</p>
+                <input type="checkbox" name="vehicle1" id='asup'>Aro Super<br>
+                <input type="checkbox" name="vehicle1" id='bsmedvanca'> Base de medidor vancante<br>
+
+                <input type="checkbox" name="vehicle1" id='saeen'>Sello AEE- Num<br>
+                <input type="text" name="firstname"><br>
+
+            </form>
+<h2>V. SI Consiste en reinspeccion por reparacion o desuso. describa.</h2>
+        <textarea id='recibrepara'>
+            </textarea>
+
+</form>
+
+<form>
+    <h2>V1. Comentario Adicional:</h2>
+<textarea id='ultimo'>
+
+
+
+</textarea>
+
+</form>
+<button>receipt</button>
+<script>
+$(function(){
+$("a.speek1").on("click",function(e){
+	e.preventDefault;
+var text = $("#reno").text() + "     " + $("#ainox").text() + "     " +$("#alu").text() + "     " +$("#agal").text() + "     " +$("#cientoveintev").text() + "     " +$$("#gfci").text() + "     " +$("#estufa").text() + "     " +$("#calent").text() + "     " +$("#dovCuarent").text() + "     " +$("#secad").text() + "     " +$("#ncirc").text() + "     " +$("#nintersello").text() + "     " +$("#dob").text() + "     " +$("#trip").text() + "     " +$("#gfcin").text() + "     " +$("#nli").text() + "     " +$("#nmoto").text() + "     " +$("#onen").text() + "     " +$("#hpn").text() + "     " +$("#tres").text() + "     " +$("#hpn").text() + "     " +$("#otro").text() + "     " +$("#sn").text() + "     " +$("#nn").text() + "     " +$("#asup").text() + "     " +$("#bsmedvanca").text() + "     " +$("#saeen").text() + "     " +$("#recibrepara").text() + "     " +("#ultimo").text();
+</script>
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"
+	  integrity="sha256-vIL0pZJsOKSz76KKVCyLxzkOT00vXs+Qz4fYRVMoDhw="
+	  crossorigin="anonymous">
+	</script>
+	<script>
+		// init the jsPDF library
+		const pdf = new jsPDF();
+		// select the button
+		let button = document.querySelector('button');
+		// select the input
+		let input = document.querySelector('input');
+		// add 'click' event listener for the button
+		button.addEventListener('click', printPDF)
+
+		function printPDF() {
+			// @param 1 - Coordinate (in units declared at inception of PDF document) against left edge of the page
+			// @param 2 - Coordinate (in units declared at inception of PDF document) against upper edge of the page
+			// @param 3 - String or array of strings to be added to the page. Each line is shifted one line down per font, spacing settings declared before this call.
+			pdf.text(10, 10, `You have to pay ${input.value}$`);
+			// save the PDF document (downloadable)
+			pdf.save();
+		}
+	</script>
+
+</body>
+
+
+</html>
